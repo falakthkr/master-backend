@@ -21,8 +21,6 @@ mongoose.connect(
     },
     (err)=>{
         if(err){
-            console.log(process.env.ATLAS_URI)
-            console.log(err,"err")
             console.log("Error connecting the database")
         }
         else{
