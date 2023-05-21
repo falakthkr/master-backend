@@ -6,9 +6,11 @@ const postSchema = new Schema({
         src: String,
         alt: String
     },
+    author: String,
     title: String,
     desc: String,
-    postBody: String
+    postBody: String,
+    lastUpdate: Date.now()
 },
 {
     versionKey: false
