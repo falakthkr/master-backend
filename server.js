@@ -18,9 +18,11 @@ app.use(cors(corsOptions));
 
 const userRoute = require("./routes/users");
 const propertiesRoute = require("./routes/estic/property");
+const blogsRoute = require("./routes/blogs/posts");
 
 app.use("/users", userRoute);
 app.use("/estic/properties", propertiesRoute);
+app.use("/blogs", blogsRoute);
 
 mongoose.connect(
   process.env.ATLAS_URI.toString(),

@@ -11,7 +11,6 @@ const getUserDetails = (req,res) => {
     .then((user)=>{
         res.json(user);
     })
-    .then(()=>res.json("Fetched user data successfully"))
     .catch((err)=>res.status(400).json("Error: "+err))
 }
 
