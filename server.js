@@ -11,10 +11,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // app.use(cookieParser());
 var corsOptions = {
-  origin:["http://localhost:3000/", "https://estic-dev.netlify.app/"],
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  origin:["http://localhost:3000/", "https://estic-dev.netlify.app/"]
 };
-app.use(cors());
+
+app.use(cors(corsOptions));
 
 const userRoute = require("./routes/users");
 const propertiesRoute = require("./routes/estic/property");
