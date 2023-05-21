@@ -13,8 +13,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const userRoute = require("./routes/users")
+const propertiesRoute = require("./routes/estic/property")
 
 app.use("/users", userRoute)
+app.use("/estic/properties", propertiesRoute)
 
 mongoose.connect(
     process.env.ATLAS_URI.toString(), {
