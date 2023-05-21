@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // app.use(cookieParser());
 var corsOptions = {
-  origin:["http://localhost:3000/", "https://estic-dev.netlify.app/"]
+  origin:["http://localhost:3000", "https://estic-dev.netlify.app"]
 };
 
 app.use(cors(corsOptions));
