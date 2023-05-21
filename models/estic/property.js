@@ -18,7 +18,7 @@ const propertySchema = new Schema(
             type: String
         }
     ],
-    site: URL
+    site: String
   },
   {
     versionKey: false,
