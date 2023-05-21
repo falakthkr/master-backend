@@ -9,8 +9,7 @@ const postSchema = new Schema({
     author: String,
     title: String,
     desc: String,
-    postBody: String,
-    lastUpdate: Date.now()
+    postBody: String
 },
 {
     versionKey: false
