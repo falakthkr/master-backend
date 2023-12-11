@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // app.use(cookieParser());
 var corsOptions = {
-  origin:["http://localhost:3000", "https://estic-dev.netlify.app"]
+  origin: ["http://localhost:3000", "https://estic-dev.netlify.app"],
 };
 
 app.use(cors(corsOptions));
@@ -19,10 +19,12 @@ app.use(cors(corsOptions));
 const userRoute = require("./routes/users");
 const propertiesRoute = require("./routes/estic/property");
 const blogsRoute = require("./routes/blogs/posts");
+const authRoute = require("./routes/auth/userAuth");
 
 app.use("/users", userRoute);
 app.use("/estic/properties", propertiesRoute);
 app.use("/blogs", blogsRoute);
+app.use("/auth", authRoute);
 
 mongoose.connect(
   process.env.ATLAS_URI.toString(),
